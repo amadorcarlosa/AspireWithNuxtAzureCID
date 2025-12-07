@@ -1,7 +1,8 @@
 var builder = DistributedApplication.CreateBuilder(args);
 
 // For Azure deployment (add when ready)
-// builder.AddAzureContainerAppEnvironment("env");
+builder.AddAzureContainerAppEnvironment("aca-env");
+
 
 var webApi = builder.AddProject<Projects.WebApi>("webapi")
     .WithHttpHealthCheck("/health");  // recommended
