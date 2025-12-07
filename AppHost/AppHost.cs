@@ -4,12 +4,12 @@ using Microsoft.Extensions.Hosting;
 var builder = DistributedApplication.CreateBuilder(args);
 
 // Add the WebApi project to the application
-var webApi = builder.AddProject<Projects.WebApi>("WebApi");
+var webApi = builder.AddProject<Projects.WebApi>("web-api");
 
 // Configure the WebApp differently based on the environment
 if(builder.Environment.IsDevelopment()){
     // Development: Run the Nuxt app with hot reload on port 4000
-    var webApp = builder.AddJavaScriptApp("WebApp", "../WebApp")
+    var webApp = builder.AddJavaScriptApp("web-app", "../WebApp")
         .WithNpm()
         .WithRunScript("dev")
         .WithHttpEndpoint(port: 4000, isProxied: false)
@@ -20,7 +20,7 @@ if(builder.Environment.IsDevelopment()){
 }
 if(builder.Environment.IsProduction()){
     // Production: Run the Nuxt app in production mode
-    var webApp = builder.AddJavaScriptApp("webapp", "../WebApp")
+    var webApp = builder.AddJavaScriptApp("web-app", "../WebApp")
         .WithNpm()
         .WithExternalHttpEndpoints()
         .WithReference(webApi)
