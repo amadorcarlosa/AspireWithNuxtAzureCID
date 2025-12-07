@@ -1,0 +1,226 @@
+]9;4;3\≡ƒö¼ Checking project type...: AppHost\AppHost.csproj
+≡ƒ¢á  Building apphost... AppHost\AppHost.csproj
+≡ƒ¢á  Executing step deploy
+|]9;4;3\23:32:57 (pipeline execution) ΓåÆ Starting pipeline execution...
+]9;4;3\23:32:57 (build-prereq) ΓåÆ Starting build-prereq...
+]9;4;3\23:32:57 (deploy-prereq) ΓåÆ Starting deploy-prereq...
+]9;4;3\23:32:57 (build-prereq) Γ£ô build-prereq completed successfully
+]9;4;3\23:32:57 (deploy-prereq) i [INF] Initializing deployment for environment 
+'Production'
+]9;4;3\23:32:57 (deploy-prereq) i [INF] Deployment state will be loaded from: 
+C:\Users\amado\.aspire\deployments\65B1669EBA06CEC1AEF30B2A337E930D57FD6DD12B569
+F2F661219D5D7D3AE22\production.json
+]9;4;3\23:32:57 (deploy-prereq) i [INF] Setting default deploy tag 
+'aspire-deploy-20251207053257' for compute resource(s).
+]9;4;3\23:32:57 (deploy-prereq) Γ£ô deploy-prereq completed successfully
+]9;4;3\23:32:57 (validate-azure-login) ΓåÆ Starting validate-azure-login...
+]9;4;3\23:32:57 (build-webapi) ΓåÆ Starting build-webapi...
+]9;4;3\23:32:57 (build-webapp) ΓåÆ Starting build-webapp...
+]9;4;3\23:32:57 (build-webapp) i [INF] Building container image for resource webapp
+]9;4;3\23:32:57 (build-webapi) i [INF] Building container image for resource webapi
+]9;4;3\23:32:57 (build-webapi) i [INF] Building image: webapi
+]9;4;3\23:32:57 (build-webapp) i [INF] Building image: webapp
+]9;4;3\23:32:57 (build-webapi) i [DBG] Starting .NET CLI with arguments: publish 
+"C:\Users\amado\code\AspireWithNuxtAzureCID\WebApi\WebApi.csproj" 
+--configuration Release /t:PublishContainer /p:ContainerRepository="webapi" 
+/p:ContainerRuntimeIdentifier="linux-x64"
+]9;4;3\23:32:57 (build-webapp) i [DBG] No Node.js version detected, using default 
+version 22
+]9;4;3\23:32:57 (build-webapp) i [DBG] Running Docker CLI with arguments: buildx build 
+--file 
+"C:\Users\amado\AppData\Local\Temp\Dockerfile.webapp.f7dcc358528d49b896acc83e900
+f2b27" --tag "webapp:8667b77d3c19df550f939d18a8fb86ff063bb27d" --platform 
+"linux/amd64" "C:\Users\amado\code\AspireWithNuxtAzureCID\WebApp"
+/-\|]9;4;3\23:32:57 (build-webapi) i [DBG] dotnet publish 
+C:\Users\amado\code\AspireWithNuxtAzureCID\WebApi\WebApi.csproj (stdout):   
+Determining projects to restore...
+/]9;4;3\23:32:57 (build-webapp) i [DBG] docker buildx (stderr): #0 building with 
+"desktop-linux" instance using docker driver
+]9;4;3\23:32:57 (build-webapp) i [DBG] docker buildx (stderr): #1 [internal] load build
+definition from Dockerfile.webapp.f7dcc358528d49b896acc83e900f2b27
+]9;4;3\23:32:57 (build-webapp) i [DBG] docker buildx (stderr): #1 transferring 
+dockerfile: 207B 0.0s done
+]9;4;3\23:32:57 (build-webapp) i [DBG] docker buildx (stderr): #1 DONE 0.0s
+]9;4;3\23:32:57 (build-webapp) i [DBG] docker buildx (stderr): #2 [internal] load 
+metadata for docker.io/library/node:22-slim
+-]9;4;3\23:32:57 (build-webapi) i [DBG] dotnet publish 
+C:\Users\amado\code\AspireWithNuxtAzureCID\WebApi\WebApi.csproj (stdout):   All 
+projects are up-to-date for restore.
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #2 DONE 0.3s
+\]9;4;3\23:32:58 (validate-azure-login) Γ£ô Azure CLI authentication validated 
+successfully
+]9;4;3\23:32:58 (create-provisioning-context) ΓåÆ Starting create-provisioning-context...
+]9;4;3\23:32:58 (create-provisioning-context) i [DBG] Azure provisioning options have 
+been handled successfully.
+]9;4;3\23:32:58 (create-provisioning-context) i [INF] Using AzureCliCredential for 
+provisioning.
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #3 [internal] load 
+.dockerignore
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #3 transferring context:
+2B done
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #3 DONE 0.0s
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #4 [stage-0 1/6] FROM 
+docker.io/library/node:22-slim@sha256:330fc735268c38d88788c3469a8dff2d0ad834af58
+569a42c61c47e4578d953b
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #4 resolve 
+docker.io/library/node:22-slim@sha256:330fc735268c38d88788c3469a8dff2d0ad834af58
+569a42c61c47e4578d953b 0.0s done
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #4 DONE 0.0s
+|]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #5 [internal] load build
+context
+/-]9;4;3\23:32:58 (build-webapi) i [DBG] dotnet publish 
+C:\Users\amado\code\AspireWithNuxtAzureCID\WebApi\WebApi.csproj (stdout):   
+WebApi -> 
+C:\Users\amado\code\AspireWithNuxtAzureCID\WebApi\bin\Release\net10.0\WebApi.dll
+]9;4;3\23:32:58 (build-webapi) i [DBG] dotnet publish 
+C:\Users\amado\code\AspireWithNuxtAzureCID\WebApi\WebApi.csproj (stdout):   
+WebApi -> 
+C:\Users\amado\code\AspireWithNuxtAzureCID\WebApi\bin\Release\net10.0\publish\
+\|]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #5 transferring context:
+1.05MB 0.5s done
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #5 DONE 0.6s
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #6 [stage-0 2/6] WORKDIR
+/app
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #6 CACHED
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #7 [stage-0 3/6] COPY 
+package*.json ./
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #7 CACHED
+]9;4;3\23:32:58 (build-webapp) i [DBG] docker buildx (stderr): #8 [stage-0 4/6] RUN 
+--mount=type=cache,target=/root/.npm npm ci
+/-\|]9;4;3\23:32:59 (build-webapi) i [DBG] dotnet publish 
+C:\Users\amado\code\AspireWithNuxtAzureCID\WebApi\WebApi.csproj (stdout):   
+Building image 'webapi' with tags 'latest' on top of base image 
+'mcr.microsoft.com/dotnet/aspnet:10.0'.
+/-\|]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error code 
+EUSAGE
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error `npm 
+ci` can only install packages when your package.json and package-lock.json or 
+npm-shrinkwrap.json are in sync. Please update your lock file with `npm install`
+before continuing.
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error 
+Invalid: lock file's commander@11.1.0 does not satisfy commander@13.1.0
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error 
+Missing: commander@11.1.0 from lock file
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error Clean
+install a project
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error 
+Usage:
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error npm 
+ci
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error 
+Options:
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error [
+--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error [
+--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error [
+--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error [
+--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error [
+--no-bin-links] [--no-fund] [--dry-run]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error [
+-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error [
+-ws|--workspaces] [--include-workspace-root] [--install-links]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error 
+aliases: clean-install, ic, install-clean, isntall-clean
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error Run 
+"npm help ci" for more info
+]9;4;3\23:32:59 (create-provisioning-context) i [INF] Default subscription: MathTabla 
+(/subscriptions/d039b736-1418-4864-bc20-bb046d789005)
+]9;4;3\23:32:59 (create-provisioning-context) i [INF] Tenant: 
+2dddf335-6391-4a0d-80ad-d2531b405291
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 1.058 npm error A 
+complete log of this run can be found in: 
+/root/.npm/_logs/2025-12-07T05_32_59_042Z-debug-0.log
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): #8 ERROR: process 
+"/bin/sh -c npm ci" did not complete successfully: exit code: 1
+]9;4;3\/23:32:59 (build-webapp) i [DBG] docker buildx (stderr): ------
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr):  > [stage-0 4/6] RUN 
+--mount=type=cache,target=/root/.npm npm ci:
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): 1.058 npm error [
+--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): 1.058 npm error [
+--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): 1.058 npm error [
+--no-bin-links] [--no-fund] [--dry-run]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): 1.058 npm error [
+-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): 1.058 npm error [
+-ws|--workspaces] [--include-workspace-root] [--install-links]
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): 1.058 npm error
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): 1.058 npm error aliases:
+clean-install, ic, install-clean, isntall-clean
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): 1.058 npm error
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): 1.058 npm error Run "npm
+help ci" for more info
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): 1.058 npm error A 
+complete log of this run can be found in: 
+/root/.npm/_logs/2025-12-07T05_32_59_042Z-debug-0.log
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): ------
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): 
+Dockerfile.webapp.f7dcc358528d49b896acc83e900f2b27:4
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): --------------------
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr):    2 |     WORKDIR /app
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr):    3 |     COPY 
+package*.json ./
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr):    4 | >>> RUN 
+--mount=type=cache,target=/root/.npm npm ci
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr):    5 |     COPY . .
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr):    6 |     RUN npm run 
+build
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): --------------------
+]9;4;3\23:32:59 (build-webapp) i [DBG] docker buildx (stderr): ERROR: failed to build: 
+failed to solve: process "/bin/sh -c npm ci" did not complete successfully: exit
+code: 1
+]9;4;3\23:32:59 (build-webapp) Γ£ù [ERR] docker buildx for 
+webapp:8667b77d3c19df550f939d18a8fb86ff063bb27d failed with exit code 1.
+]9;4;3\23:32:59 (build-webapp) Γ£ù [ERR] Failed to build container image from Dockerfile 
+for webapp
+]9;4;3\23:32:59 (build-webapp) Γ£ù [ERR] Step 'build-webapp' failed.
+]9;4;3\23:32:59 (build-webapp) Γ£ù Step 'build-webapp' failed: Docker build failed with 
+exit code 1.
+]9;4;3\23:32:59 (create-provisioning-context) i [INF] Creating resource group 
+rg-aspire-apphost in centralus...
+]9;4;3\23:32:59 (create-provisioning-context) Γ£ù [ERR] Step 
+'create-provisioning-context' failed.
+]9;4;3\23:32:59 (create-provisioning-context) Γ£ù Step 'create-provisioning-context' 
+failed: The operation was canceled.
+]9;4;3\23:32:59 (build-webapi) Γ£ù [ERR] Step 'build-webapi' failed.
+]9;4;3\23:32:59 (build-webapi) Γ£ù Step 'build-webapi' failed: Command dotnet publish 
+"C:\Users\amado\code\AspireWithNuxtAzureCID\WebApi\WebApi.csproj" 
+--configuration Release /t:PublishContainer /p:ContainerRepository="webapi" 
+/p:ContainerRuntimeIdentifier="linux-x64" returned non-zero exit code -1
+]9;4;3\23:32:59 (pipeline execution) Γ£ù [ERR] Multiple pipeline steps failed: 
+create-provisioning-context, build-webapi, build-webapp (Step 
+'create-provisioning-context' failed: The operation was canceled.) (Step 
+'build-webapi' failed: Command dotnet publish 
+"C:\Users\amado\code\AspireWithNuxtAzureCID\WebApi\WebApi.csproj" 
+--configuration Release /t:PublishContainer /p:ContainerRepository="webapi" 
+/p:ContainerRuntimeIdentifier="linux-x64" returned non-zero exit code -1) (Step 
+'build-webapp' failed: Docker build failed with exit code 1.)
+]9;4;3\23:32:59 (pipeline execution) Γ£ù Failed
+]9;4;3\------------------------------------------------------------
+Γ£ô 3/7 steps succeeded ΓÇó Γ£ù 4 failed ΓÇó Total time: 2.8s
+
+Steps Summary:
+   2.8 s  Γ£ù pipeline execution
+   2.8 s  Γ£ù build-webapi
+   2.7 s  Γ£ù build-webapp
+   1.7 s  Γ£ù create-provisioning-context
+   1.0 s  Γ£ô validate-azure-login
+   0.0 s  Γ£ô deploy-prereq
+   0.0 s  Γ£ô build-prereq
+
+Γ£ù PIPELINE FAILED
+------------------------------------------------------------
+
+ ]9;4;0\
